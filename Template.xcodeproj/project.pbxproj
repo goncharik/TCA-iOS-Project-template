@@ -6,6 +6,26 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		44809F832D22A8F80036CFC0 /* SwiftGen */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 44809F842D22A8F80036CFC0 /* Build configuration list for PBXAggregateTarget "SwiftGen" */;
+			buildPhases = (
+				44809F872D22A8FF0036CFC0 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = SwiftGen;
+			packageProductDependencies = (
+			);
+			productName = SwiftGen;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		44F6829D2D22B4E00027DC2E /* App in Frameworks */ = {isa = PBXBuildFile; productRef = 44F6829C2D22B4E00027DC2E /* App */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		44809F642D22A52A0036CFC0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +47,9 @@
 		44809F532D22A5280036CFC0 /* Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Template.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44809F632D22A52A0036CFC0 /* TemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44809F6D2D22A52A0036CFC0 /* TemplateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemplateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		44809F802D22A56D0036CFC0 /* Modules */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Modules; sourceTree = "<group>"; };
+		44809F882D22AAD50036CFC0 /* main.swiftformat */ = {isa = PBXFileReference; lastKnownFileType = text; path = main.swiftformat; sourceTree = "<group>"; };
+		44809F892D22AAD50036CFC0 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44F6829D2D22B4E00027DC2E /* App in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,10 +99,14 @@
 		44809F4A2D22A5280036CFC0 = {
 			isa = PBXGroup;
 			children = (
+				44809F802D22A56D0036CFC0 /* Modules */,
 				44809F552D22A5280036CFC0 /* Template */,
 				44809F662D22A52A0036CFC0 /* TemplateTests */,
 				44809F702D22A52A0036CFC0 /* TemplateUITests */,
 				44809F542D22A5280036CFC0 /* Products */,
+				44809F882D22AAD50036CFC0 /* main.swiftformat */,
+				44809F892D22AAD50036CFC0 /* swiftgen.yml */,
+				44F6829B2D22B4E00027DC2E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +118,13 @@
 				44809F6D2D22A52A0036CFC0 /* TemplateUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		44F6829B2D22B4E00027DC2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +147,7 @@
 			);
 			name = Template;
 			packageProductDependencies = (
+				44F6829C2D22B4E00027DC2E /* App */,
 			);
 			productName = Template;
 			productReference = 44809F532D22A5280036CFC0 /* Template.app */;
@@ -184,6 +220,9 @@
 						CreatedOnToolsVersion = 16.0;
 						TestTargetID = 44809F522D22A5280036CFC0;
 					};
+					44809F832D22A8F80036CFC0 = {
+						CreatedOnToolsVersion = 16.0;
+					};
 				};
 			};
 			buildConfigurationList = 44809F4E2D22A5280036CFC0 /* Build configuration list for PBXProject "Template" */;
@@ -203,6 +242,7 @@
 				44809F522D22A5280036CFC0 /* Template */,
 				44809F622D22A52A0036CFC0 /* TemplateTests */,
 				44809F6C2D22A52A0036CFC0 /* TemplateUITests */,
+				44809F832D22A8F80036CFC0 /* SwiftGen */,
 			);
 		};
 /* End PBXProject section */
@@ -230,6 +270,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		44809F872D22A8FF0036CFC0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./scripts/swiftgen -c swiftgen.yml --verbose\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		44809F4F2D22A5280036CFC0 /* Sources */ = {
@@ -403,6 +463,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -431,6 +492,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -512,6 +574,22 @@
 			};
 			name = Release;
 		};
+		44809F852D22A8F80036CFC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		44809F862D22A8F80036CFC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -551,7 +629,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		44809F842D22A8F80036CFC0 /* Build configuration list for PBXAggregateTarget "SwiftGen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44809F852D22A8F80036CFC0 /* Debug */,
+				44809F862D22A8F80036CFC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		44F6829C2D22B4E00027DC2E /* App */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = App;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 44809F4B2D22A5280036CFC0 /* Project object */;
 }

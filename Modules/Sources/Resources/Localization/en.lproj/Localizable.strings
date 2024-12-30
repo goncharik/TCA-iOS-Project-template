@@ -1,0 +1,10 @@
+"bt_yes" = "Yes";
+"bt_no" = "No";
+"bt_cancel" = "Cancel";
+"bt_done" = "Done";
+"bt_next" = "NEXT";
+"bt_ok" = "OK";
+"error_title" = "Something went wrong :(";
+"error_network_title" = "Your connection may have timed out. Please refresh the page or try again.";
+"error_network_short_title" = "No internet";
+"unknown" = "Unknown";

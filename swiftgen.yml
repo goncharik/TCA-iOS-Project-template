@@ -1,0 +1,20 @@
+strings:
+  inputs: Modules/Sources/Resources/Localization/en.lproj
+  outputs:
+    - templateName: structured-swift5
+      output: Modules/Sources/Resources/SwiftGen/Strings.swift
+      params:
+        publicAccess: true
+        bundle: Bundle.swiftUIPreviewsCompatibleModule
+
+xcassets:
+  inputs:
+    - Modules/Sources/Resources/Images.xcassets
+    - Modules/Sources/Resources/Colors.xcassets
+  outputs:
+    - templateName: swift5
+      output: Modules/Sources/Resources/SwiftGen/Assets.swift
+      params: 
+        publicAccess: true
+        bundle: Bundle.swiftUIPreviewsCompatibleModule
+      
