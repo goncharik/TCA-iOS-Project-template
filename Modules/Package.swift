@@ -28,17 +28,17 @@ let package = Package(
         // testing, and ergonomics in mind.
         .package(
             url: "https://github.com/pointfreeco/swift-composable-architecture",
-            from: "1.11.0"
+            from: "1.17.0"
         ),
         // A library for snapshot testing in Swift
         .package(
             url: "https://github.com/pointfreeco/swift-snapshot-testing",
-            from: "1.1.0"
+            from: "1.7.0"
         ),
         // A library for mocking dependencies in Swift
         .package(
             url: "https://github.com/pointfreeco/xctest-dynamic-overlay",
-            from: "1.0.0"
+            from: "1.4.3"
         ),
         // Safely access Apple's SF Symbols using static typing
         .package(
